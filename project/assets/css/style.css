@@ -130,6 +130,48 @@ html {
   color: #000000;
 }
 
+/*  ---------------Slider-----------------  */
+
+.slider{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+
+.slider img {
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slide-item {
+  position: relative;
+}
+
+.slide-text {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: white;
+  padding: 120px 70px;
+  text-decoration: none;
+  font-family: "Rubik Dirt", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 80%;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.slide-text:hover {
+  
+}
+
+
+
 /*  ---------------Footer-----------------  */
 footer {
   background-color: #9d9c9c;
