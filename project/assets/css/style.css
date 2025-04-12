@@ -170,6 +170,50 @@ html {
   
 }
 
+.thumb-grid {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.grid-heading {
+  font-family: "Pacifico", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.thumb-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.thumb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.3s ease;
+}
+
+.thumb img {
+  width: 270px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+.thumb span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.thumb:hover {
+  transform: scale(1.05);
+}
 
 
 /*  ---------------Footer-----------------  */
