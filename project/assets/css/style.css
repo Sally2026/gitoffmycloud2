@@ -25,33 +25,55 @@ html {
   
   /*  ---------------Header Styles-----------------  */ 
   
-  .main-nav {
+  header.primary {
     display: flex;
     align-items:flex-start;
     justify-content: space-between;
-    padding: 0 20px;
     background: #008B8B;
+    margin: 0px;
+    padding: 0px;
   }
 
-  .nav ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 20px;
-    list-style: none;
-    margin-top: 50px;
-    font-size: 1.2rem;
-    margin-right: 40px;
+  header.primary img {
+    height: 90px;
+    margin: 0;
+    padding: 0;
   }
-  
-  .nav a{
+
+  header.primary ul li a {
     text-decoration: none;
-    color: #FFFCEA;
+    color: #ffffff;
   }
-  
-  .nav a:hover{
+
+  header.primary ul li a:hover {
     color: #000000;
   }
+
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 1.2rem;
+    margin-right: 40px;
+    color: #ffffff;
+  }
+
+  .hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  
+  .nav-list{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+
+  .nav-list li {
+    display: inline;
+  } 
 
   .request-form{
     background: #FFB962;
@@ -65,12 +87,6 @@ html {
   .request-form:hover{
     color: #FFB962;
     border: 2px solid #000000;
-  }
-
-  .hamburger {
-    display: none;
-    font-size: 2rem;
-    cursor: pointer;
   }
 
   
@@ -313,6 +329,66 @@ footer a:hover{
   display: block;
   padding: 0 0 0 0;
   margin-top: 40px;
+}
+
+
+/*  ---------------Back to Top-----------------  */
+
+.progress-wrap {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	display: block;
+	border-radius: 50px;
+	background-color: #FFB962;           /* ✅ black circle */
+	box-shadow: inset 0 0 0 2px rgba(255,255,255,0.2);
+	z-index: 10000;
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(15px);
+	transition: all 200ms linear;
+}
+
+.progress-wrap.active-progress {
+	opacity: 1;
+	visibility: visible;
+	transform: translateY(0);
+}
+
+.progress-wrap::after {
+	position: absolute;
+	content: '↑';               
+	text-align: center;
+	line-height: 46px;
+	font-size: 24px;
+	color: #ffffff;                 
+	left: 0;
+	top: 0;
+	height: 46px;
+	width: 46px;
+	cursor: pointer;
+	display: block;
+	z-index: 2;
+	transition: all 200ms linear;
+}
+
+/* Removed the hover effect */
+.progress-wrap::before {
+	display: none;
+}
+
+.progress-wrap svg path { 
+	fill: none; 
+}
+
+.progress-wrap svg.progress-circle path {
+	stroke: #ffffff; /* optional: match the arrow */
+	stroke-width: 4;
+	box-sizing: border-box;
+	transition: all 200ms linear;
 }
 
 
