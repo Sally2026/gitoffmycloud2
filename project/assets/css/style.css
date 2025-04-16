@@ -145,42 +145,46 @@ html {
 
 .thumb {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: center; /* Center items */
+  gap: 20px; /* Adds spacing between items */
   margin: 20px 0;
-  padding: 20px 40px;
+  padding: 20px;
 }
 
 .thumb-wrapper {
- position: relative;
+  position: relative;
+  max-width: 100%;
+  flex: 1 1 150px; /* Flexible width with a minimum of 280px */
+  text-align: center;
 }
 
-
 .thumb-wrapper img {
-  width: 280px;
+  width: 100%; /* Full width of the wrapper */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  margin-bottom: 10px;
-  align-items: center;
 }
 
 .thumb-text {
   position: absolute;
-  top: 15x;
-  left: 15px;
+  top: 50%; /* Center text vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it */
   color: white;
-  padding: 120px 65px;
   text-decoration: none;
   font-family: "Rubik Dirt", system-ui;
-  font-weight: 400;
-  font-style: normal;
-  opacity: 80%;
   font-size: 1.7rem;
+  font-weight: 400;
+  opacity: 0.8;
+  padding: 10px 20px;
+  border-radius: 8px;
   text-align: center;
 }
 
 .thumb-wrapper:hover {
   transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 
@@ -393,4 +397,5 @@ footer a:hover{
 
 
   /*  ---------------Media Queries-----------------  */
-  
+
+
