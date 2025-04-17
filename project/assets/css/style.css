@@ -13,7 +13,7 @@ html {
     font-family: "DM Serif Text", serif;
     background: #FFFCEA;
   }
-  
+   
   .container{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -64,7 +64,7 @@ html {
     font-size: 2rem;
     cursor: pointer;
   }
-  
+
   .nav-list{
     list-style: none;
     display: flex;
@@ -145,22 +145,22 @@ html {
 
 .thumb {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-  justify-content: center; /* Center items */
-  gap: 20px; /* Adds spacing between items */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   margin: 20px 0;
   padding: 20px;
 }
 
 .thumb-wrapper {
   position: relative;
+  flex: 0 0 100%;
   max-width: 100%;
-  flex: 1 1 150px; /* Flexible width with a minimum of 280px */
   text-align: center;
 }
 
 .thumb-wrapper img {
-  width: 100%; /* Full width of the wrapper */
+  width: 100%; 
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
@@ -168,9 +168,9 @@ html {
 
 .thumb-text {
   position: absolute;
-  top: 50%; /* Center text vertically */
+  top: 50%; 
   left: 50%;
-  transform: translate(-50%, -50%); /* Center it */
+  transform: translate(-50%, -50%); 
   color: white;
   text-decoration: none;
   font-family: "Rubik Dirt", system-ui;
@@ -347,7 +347,7 @@ footer a:hover{
 	cursor: pointer;
 	display: block;
 	border-radius: 50px;
-	background-color: #FFB962;           /* ✅ black circle */
+	background-color: #FFB962;           
 	box-shadow: inset 0 0 0 2px rgba(255,255,255,0.2);
 	z-index: 10000;
 	opacity: 0;
@@ -379,7 +379,7 @@ footer a:hover{
 	transition: all 200ms linear;
 }
 
-/* Removed the hover effect */
+
 .progress-wrap::before {
 	display: none;
 }
@@ -389,7 +389,7 @@ footer a:hover{
 }
 
 .progress-wrap svg.progress-circle path {
-	stroke: #ffffff; /* optional: match the arrow */
+	stroke: #ffffff;
 	stroke-width: 4;
 	box-sizing: border-box;
 	transition: all 200ms linear;
@@ -398,4 +398,142 @@ footer a:hover{
 
   /*  ---------------Media Queries-----------------  */
 
+@media (max-width: 576px) {
+  .nav-list.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 139, 139, 0.95); /* background similar to header */
+    z-index: 9999;
+    gap: 30px;
+    overflow: hidden;
+  }
 
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list.active li {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    color: #000000; /* Show hamburger icon */
+    z-index: 10000;
+  }
+
+  #bio {
+    height: 50vh; /* Adjusted height for smaller screens */
+  }
+
+  .bio-text {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+  }
+
+  #content {
+    font-size: 1rem; /* Adjusted font size for smaller screens */
+  }
+
+  .intro {
+    font-size: 2rem; /* Adjusted font size for smaller screens */
+  }
+
+  .thumb {
+
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .thumb-wrapper {
+    max-width: 100%; /* Ensure full width */
+  }
+
+  .thumb-text {
+    font-size: 1.5rem; /* Adjusted font size for smaller screens */
+  }
+
+  footer {
+    padding: 30px; /* Adjusted padding for smaller screens */
+  }
+
+  .footer-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .vl-text {
+    text-align: center; /* Center text */
+  }
+
+  .contact {
+    align-items: center; /* Center items */
+  }
+
+  .progress-wrap {
+    right: 20px; /* Adjusted position for smaller screens */
+    bottom: 20px; /* Adjusted position for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-list.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 100vw;
+    height: 90vh;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 139, 139, 0.95); /* background similar to header */
+    z-index: 9999;
+    gap: 30px;
+    overflow: hidden;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-list.active li {
+    padding: 5px 10px;
+    font-size: 1.5rem;
+  }
+
+  .hamburger {
+    display: block;
+    color: #000000; /* Show hamburger icon */
+    z-index: 10000;
+  }
+}
+
+@media (max-width: 992px){
+
+}
+
+@media (min-width: 577px) and (max-width: 934px) {
+  .thumb-wrapper {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (min-width: 935px) {
+  .thumb-wrapper {
+    flex: 0 0 calc(25% - 20px);
+    max-width: calc(25% - 20px);
+  }
+}
