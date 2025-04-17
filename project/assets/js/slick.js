@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(window).on('load', function() {
     $('.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
