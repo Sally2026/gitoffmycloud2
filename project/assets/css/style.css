@@ -38,6 +38,7 @@ html {
     height: 90px;
     margin: 0;
     padding: 0;
+    margin-left: 15px;
   }
 
   header.primary ul li a {
@@ -47,6 +48,21 @@ html {
 
   header.primary ul li a:hover {
     color: #000000;
+  }
+
+  header.primary figure h4{
+    font-family: "DM Serif Text", serif;
+    font-size: 1rem;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+  }
+
+  header.primary figure a {
+    text-decoration: none;
   }
 
   .navbar{
@@ -222,8 +238,10 @@ html {
 .buttons{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  padding: 20px;
+  gap: 10px;
 }
+
 .buttons button {
   margin: 5px;
   padding: 10px 15px;
@@ -235,19 +253,23 @@ html {
 
 .buttons button {
   margin: 5px;
-  padding: 10px 15px;
+  padding: 20px 0px;
   background-color: #008B8B;
   color: white;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
   border-radius: 8px;
+  font-size: 1.2rem;
+  font-family: "DM Serif Text", serif;
 }
 
 /* Hover effect */
 .buttons button:hover {
   background-color: #003f5c;
   color: white;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 
@@ -263,11 +285,13 @@ html {
 canvas#waterLevelChart {
   width: 100% !important;
   height: 400px !important;
+
 }
 
 .data-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
   gap: 20px;
   max-width: 1200px;
   margin: auto;
@@ -277,6 +301,8 @@ canvas#waterLevelChart {
 .data-item:hover{
   background-color: #003f5c;
   color: white;
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .data-item {
